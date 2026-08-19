@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -500,6 +501,242 @@ footer a[data-page]{cursor:pointer}
   .contact-panel,.contact-form{padding:28px}
   .inline-cta{display:block}
   .inline-cta .btn{margin-top:22px}
+}
+
+
+
+/* =========================================================
+   FRANFFER · WIX EMBED COMPATIBILITY LAYER
+   Conserva diseño/contenido; mejora comportamiento en iframe.
+   ========================================================= */
+
+/* Blindaje general contra overflow horizontal */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+body {
+  min-width: 0 !important;
+}
+*, *::before, *::after {
+  min-width: 0;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+}
+.shell {
+  width: 100%;
+}
+
+/* Clase activada automáticamente cuando el sitio está incrustado */
+body.wix-embed {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+  overscroll-behavior-x: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* El sitio sigue desplazándose, pero sin una segunda barra visual */
+body.wix-embed {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body.wix-embed::-webkit-scrollbar,
+body.wix-embed *::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+/* Evita que elementos decorativos generen ancho extra */
+body.wix-embed .hero,
+body.wix-embed .subhero,
+body.wix-embed .section,
+body.wix-embed .page-section,
+body.wix-embed footer {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Mejor comportamiento de encabezados largos */
+body.wix-embed h1,
+body.wix-embed h2,
+body.wix-embed h3,
+body.wix-embed p,
+body.wix-embed li,
+body.wix-embed a {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Compactación moderada dentro de Wix, sin alterar jerarquía */
+@media (max-width: 1000px) {
+  body.wix-embed .hero {
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+  body.wix-embed .hero-grid {
+    gap: 24px;
+  }
+  body.wix-embed .section,
+  body.wix-embed .page-section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+}
+
+@media (max-width: 640px) {
+  body.wix-embed .shell {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body.wix-embed header {
+    height: 68px;
+  }
+  body.wix-embed .mobile-menu {
+    inset: 68px 0 0 0;
+  }
+  body.wix-embed .brand img {
+    width: 142px;
+  }
+
+  body.wix-embed .hero {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+  body.wix-embed .hero-grid {
+    gap: 20px;
+  }
+  body.wix-embed .hero h1 {
+    font-size: clamp(40px, 13vw, 50px);
+    line-height: .88;
+    max-width: 100%;
+  }
+  body.wix-embed .hero p {
+    font-size: 15.5px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+  body.wix-embed .hero-actions {
+    gap: 9px;
+  }
+  body.wix-embed .btn {
+    min-height: 46px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  body.wix-embed .hero-note {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+
+  body.wix-embed .hero-media {
+    min-height: 335px;
+  }
+  body.wix-embed .hero-image {
+    inset: 0 0 24px 0;
+  }
+  body.wix-embed .hero-badge {
+    left: 8px;
+    width: min(210px, 68vw);
+    padding: 15px;
+  }
+  body.wix-embed .hero-stamp {
+    width: 84px;
+    height: 84px;
+    right: 0;
+  }
+
+  body.wix-embed .section,
+  body.wix-embed .page-section {
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+  body.wix-embed .quote-wrap {
+    padding-bottom: 44px;
+  }
+  body.wix-embed .quote-card {
+    padding: 20px 16px;
+  }
+  body.wix-embed .section-head h2,
+  body.wix-embed .coverage h2 {
+    font-size: 38px;
+  }
+  body.wix-embed .service-card {
+    min-height: 235px;
+  }
+  body.wix-embed .service-card .num {
+    margin-bottom: 20px;
+  }
+
+  body.wix-embed .subhero {
+    padding-top: 46px;
+    padding-bottom: 40px;
+  }
+  body.wix-embed .subhero h1 {
+    font-size: 42px;
+  }
+
+  body.wix-embed .service-detail {
+    padding: 24px 20px;
+  }
+  body.wix-embed .service-detail .num {
+    font-size: 54px;
+  }
+  body.wix-embed .service-detail h3 {
+    font-size: 31px;
+  }
+  body.wix-embed .coverage-tool,
+  body.wix-embed .contact-panel,
+  body.wix-embed .contact-form,
+  body.wix-embed .about-copy {
+    padding: 22px 18px;
+  }
+
+  body.wix-embed .cta-box {
+    padding: 30px 22px;
+  }
+  body.wix-embed .cta-box h2 {
+    font-size: 36px;
+  }
+
+  body.wix-embed .editorial-media img {
+    height: 330px;
+  }
+  body.wix-embed .editorial-copy h2 {
+    font-size: 41px;
+  }
+
+  body.wix-embed .footer-grid {
+    gap: 24px;
+  }
+  body.wix-embed footer {
+    padding-top: 42px;
+  }
+}
+
+/* Pantallas muy angostas dentro del iframe */
+@media (max-width: 420px) {
+  body.wix-embed .shell {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  body.wix-embed .hero h1 {
+    font-size: clamp(38px, 12.3vw, 46px);
+  }
+  body.wix-embed .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body.wix-embed .hero-actions .btn {
+    width: 100%;
+  }
+  body.wix-embed .process {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 </style>
@@ -1232,5 +1469,25 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
 });
 
 </script>
+
+
+<script>
+/* Wix embed mode:
+   - Solo se activa cuando el HTML está dentro de un iframe.
+   - No cambia la versión normal de GitHub Pages abierta directamente.
+*/
+(function () {
+  try {
+    if (window.self !== window.top) {
+      document.body.classList.add('wix-embed');
+      document.documentElement.classList.add('wix-embed-root');
+    }
+  } catch (e) {
+    document.body.classList.add('wix-embed');
+    document.documentElement.classList.add('wix-embed-root');
+  }
+})();
+</script>
+
 </body>
 </html>
